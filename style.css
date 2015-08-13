@@ -235,6 +235,9 @@ textarea {
   font-size: 1rem;
   line-height: 1.5; }
 
+.bold-text {
+  font-weight: bold; }
+
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
@@ -332,6 +335,18 @@ img {
   max-width: 100%;
   /* Adhere to container width. */ }
 
+.site-footer {
+  min-width: 100%;
+  height: 132px;
+  background-color: #4B617A; }
+  .site-footer .site-info {
+    text-align: center;
+    margin-top: 50px; }
+    .site-footer .site-info p {
+      color: white; }
+      .site-footer .site-info p a {
+        color: #FD7888; }
+
 table {
   margin: 0 0 1.5em;
   width: 100%; }
@@ -423,39 +438,14 @@ a {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
-  .main-navigation ul {
-    display: none;
+  text-align: center; }
+  .main-navigation .nav-menu li {
     list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    .main-navigation ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 1.5em;
-      left: -999em;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999em;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
-    float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
+    display: inline-block;
+    padding: 50px; }
+
+.entry-title {
+  text-align: center; }
 
 /* Small menu. */
 .menu-toggle,
@@ -650,6 +640,16 @@ iframe,
 object {
   max-width: 100%; }
 
+#custom-bg {
+  min-width: 100%;
+  height: 462px;
+  position: absolute;
+  top: 0;
+  z-index: -999;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0; }
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
@@ -696,3 +696,18 @@ object {
 
 .gallery-caption {
   display: block; }
+
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+@font-face {
+  font-family: GoodDog;
+  src: "";
+  font-weight: normal; }
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+.center-align {
+  text-align: center;
+  margin: 0 auto; }

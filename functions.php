@@ -114,6 +114,8 @@ add_action( 'widgets_init', 'learning_omnivores_widgets_init' );
 function learning_omnivores_scripts() {
 	wp_enqueue_style( 'learning-omnivores-style', get_stylesheet_uri() );
 
+	// wp_enqueue_style( 'GoodDog', get_template_uri() . 'fonts/GoodDog.otf' );
+
 	wp_enqueue_script( 'learning-omnivores-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'learning-omnivores-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );

@@ -16,6 +16,14 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+		<div class="about">
+
+			<h2>About</h2>	
+
+			<p>Learning Omnivores is dedicated to giving teachers the tools and knowledge they need to better handle a classroom. Learning Omnivores provides New Rules that any teacher can follow as well as blog posts to inspire you.</p>		
+
+		</div>     
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>

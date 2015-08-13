@@ -9,6 +9,10 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
+.bold-text {
+	font-weight: bold;
+}
+
 @import "headings";
 
 @import "copy";
