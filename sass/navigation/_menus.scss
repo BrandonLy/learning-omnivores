@@ -1,12 +1,35 @@
+//Variables
+$nav-height: 88px;
+
 .main-navigation {
 	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	height: $nav-height;
+	background-color: rgba(60,60,60, .4);
 	.nav-menu {
 		li {
 			list-style: none;
 			display: inline-block;
-			padding: 50px;
+			padding-left: 50px;
+			padding-right: 50px;
+			a {
+				color: white;
+				text-decoration: none;
+				font-size: 28px;
+			}
 		}
 	}
+}
+
+#menu-item-7 {
+	background-image: url('Logo.png');
+	list-style: none;
+	width: 160px;
+	height: 74px;
+	background-repeat: no-repeat;
+	float: left;
+	margin-left: 33px;
 }
 
 .entry-title {

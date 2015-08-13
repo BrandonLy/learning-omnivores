@@ -16,6 +16,12 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+		<div class="home">
+			
+			<h1 class="learning-omnivores">Learning Omnivores</h1>
+
+		</div>
+
 		<div class="about">
 
 			<h2>About</h2>	

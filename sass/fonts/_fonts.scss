@@ -1,5 +1,46 @@
 @font-face {
 	font-family: GoodDog;
-	src: "";
+	src: "fonts/GoodDog.otf";
 	font-weight: normal;
+}
+
+body {
+	font-family: $body-font;
+	font-weight: "light";
+}
+
+.entry-content {
+	.bold-text {
+		font-size: 45px;
+		font-family: $heading-font;
+	}
+	p {
+		font-size: $body-font-size;
+	}
+}
+
+.main-navigation {
+	font-family: $heading-font;
+}
+
+.entry-title {
+	font-family: $heading-font;
+}
+
+div.about {
+	p{
+		font-family: $body-font;
+		font-size: $body-font-size;
+	}
+	h2 {
+		font-family: $heading-font;
+		font-size: 50px;
+		color: #966C6C;
+	}
+}
+
+.learning-omnivores {
+	font-family: $heading-font;
+	color: white;
+	font-size: 95px;
 }
