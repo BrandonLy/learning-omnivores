@@ -20,14 +20,29 @@ object {
 	position: absolute;
 	top: 0;
 	z-index: -999;
-	background-repeat: no-repeat;
 	padding: 0;
 	margin: 0;
+	@include bgimg();
 }
 
 .home {
-	background-image: url('Header-image.jpg');
-	background-repeat: no-repeat;
+	@include bgimg();
+	background-image: url('image/Header-image.jpg');
+}
+
+.fire {
+	background-image: url('image/fire-home.jpg');
+	@include bgimg();
+}
+
+.rules {
+	background-image: url('image/rules-home.jpg');
+	@include bgimg();
+}
+
+.reading {
+	background-image: url('image/reading-home.jpg');
+	@include bgimg();
 }
 
 /*--------------------------------------------------------------

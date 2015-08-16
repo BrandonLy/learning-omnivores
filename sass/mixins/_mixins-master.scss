@@ -21,3 +21,18 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+//Establish basics for background images
+@mixin bgimg() {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+@mixin vcenter() {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+}

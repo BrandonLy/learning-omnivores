@@ -14,6 +14,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<p>&copy; <?php echo Date("Y"); ?> Learning Omnivores / Built by <a href="https://cherrypopdesigns.com" title="Cherry Pop Designs">Cherry Pop Designs</a></p>
+			<p><?php wp_nav_menu(array('menu'=>'footer-menu' )); ?></p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

@@ -1,26 +1,168 @@
-.center-align {
-	text-align: center;
-	margin: 0 auto;
-}
-
 .entry-content {
 	max-width: 760px;
 	margin: 0 auto;
 }
 
 .about {
-	width: 760px;
+	min-width: 100%;
 	margin: 0 auto;
+	background-color: white;
 	text-align: center;
+	padding-top: 64px;
+	h2 {
+		margin-top: 0;
+	}
+	p {
+		width: 760px;
+		margin: 0 auto;
+		margin-bottom: 65px;
+	}
 }
 
 .home {
 	min-width: 100%;
-	height: 882px;
+	height: calc(80vh - 88px);
 	text-align: center;
 	margin: 0;
+	position: relative;
 	.learning-omnivores {
 		margin: 0;
-		padding: 0;
+	    padding: 0;
+	    @include vcenter();
 	}
+}
+
+.home-banner {
+	min-width: 100%;
+	height: 249px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	margin-bottom: 64px;
+}
+
+.post {
+	margin-bottom: 62px;
+	min-width: 100%;
+	position: relative;
+	text-align: center;
+	.post-info {
+		text-align: center;
+		margin: 0 auto;
+	}
+	.post-author, .post-date {
+		border-radius: 25px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: #9B9B9B;
+		padding: 8px 15px;
+		margin-left: 22px;
+		margin-right: 22px;
+		background-color: white;
+		text-align: center;
+	}
+	.post-link {
+		width: 760px;
+		margin: 0 auto;
+	}
+	.post-title {
+		text-align: center;
+	}
+	.post-content {
+		width: 950px;
+		margin: 0 auto;
+		font-size: 22px;
+	}
+}
+.books {
+	display: inline-block;
+	max-width: 80%;
+	margin: 0 auto;
+	.book {
+		display: inline-block;
+		padding: 78px 41px; 
+		img {
+			max-width: 222px;
+			max-height: 339px;
+		}
+	}
+}
+
+.reading-book {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.line {
+	border: solid;
+	border-width: thin;
+	border-color: #9B9B9B;
+	position: absolute;
+	min-width: 100%;
+	z-index: -999;
+	top: 2%;
+}
+
+.single-line {
+	top: 48%;
+}
+
+.single-post {
+	text-align: left;
+}
+
+.excerpt {
+	p{
+		width: 760px;
+		margin: 0 auto;
+		text-align: left;
+		margin-bottom: 46px;
+	}
+}
+
+.menu-footer-links-container {
+	background-color: #4B617A;
+	margin-bottom: 0;
+	padding-bottom: 15px;
+	#menu-footer-links {
+		margin-left: 0;
+		padding-left: 0;
+	}
+	ul {
+		li {
+			display: inline-block;
+		}
+	}
+}
+
+.top-margin {
+	margin-top: 100px;
+}
+
+.contact {
+	min-width: 100%;
+}
+
+.gform_wrapper {
+	margin: 0;
+	float: left;
+	padding: 0;
+	max-width: 500px;
+}
+
+.email {
+	margin: 0; 
+	float: right;
+	max-width: 260px;
+	padding: 0;
+}
+
+.view-books {
+	border-radius: 25px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #966C6C;
+	paddding: 10px;
+	max-width: 150px;
+	margin: 0 auto 100px auto;
 }

@@ -1,8 +1,8 @@
 <?php
-/**
- * The template for displaying all single posts.
- *
- * @package Learning Omnivores
+/*
+
+	Template Name: What We're Reading Single Post
+
  */
 
 get_header(); ?>
@@ -12,9 +12,11 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-			<div class="single-post post">
-			
-				<div class="post top-margin">
+			<div class="post single-post">
+
+				<h1 class="post-title"><?php the_title(); ?></h1>
+
+				<div class="post">
 				<div class="line single-line"></div>
 
 						<span class="post-author">By <?php echo get_the_author(); ?></span>
@@ -23,7 +25,7 @@ get_header(); ?>
 
 				</div>
 
-				<h1 class="post-title"><?php the_title(); ?></h1>
+				<div class="reading-book"><img src="<?php echo wp_get_attachment_url( get_post_meta(get_the_ID(), 'book_cover', TRUE) );?>"/></div>
 
 				<div class="post-content"><?php the_content(); ?></div>
 				<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>

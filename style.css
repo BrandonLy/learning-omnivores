@@ -426,20 +426,26 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
-  color: royalblue; }
-  a:visited {
-    color: purple; }
-  a:hover,
-  a:focus,
-  a:active {
-    color: midnightblue; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover,
-  a:active {
-    outline: 0; }
+/*a {
+	color: $color__link;
 
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+*/
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -448,19 +454,21 @@ a {
   margin: 0px;
   padding: 0px;
   height: 88px;
-  background-color: rgba(60, 60, 60, 0.4); }
+  background-color: rgba(60, 60, 60, 0.4);
+  position: relative; }
   .main-navigation .nav-menu li {
     list-style: none;
     display: inline-block;
-    padding-left: 50px;
-    padding-right: 50px; }
+    padding-left: 26px;
+    padding-right: 26px;
+    margin-top: 20px; }
     .main-navigation .nav-menu li a {
       color: white;
       text-decoration: none;
       font-size: 28px; }
 
 #menu-item-7 {
-  background-image: url("Logo.png");
+  background-image: url("image/Logo.png");
   list-style: none;
   width: 160px;
   height: 74px;
@@ -670,13 +678,35 @@ object {
   position: absolute;
   top: 0;
   z-index: -999;
-  background-repeat: no-repeat;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
 
 .home {
-  background-image: url("Header-image.jpg");
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("image/Header-image.jpg"); }
+
+.fire {
+  background-image: url("image/fire-home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.rules {
+  background-image: url("image/rules-home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.reading {
+  background-image: url("image/reading-home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
 
 /*--------------------------------------------------------------
 ## Captions
@@ -729,12 +759,14 @@ object {
 # Fonts
 --------------------------------------------------------------*/
 @font-face {
-  font-family: GoodDog;
-  src: "fonts/GoodDog.otf";
-  font-weight: normal; }
+  font-family: 'GoodDog';
+  src: url("fonts/gooddog-webfont.eot");
+  src: url("fonts/gooddog-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/gooddog-webfont.woff2") format("woff2"), url("fonts/gooddog-webfont.woff") format("woff"), url("fonts/gooddog-webfont.ttf") format("truetype"), url("fonts/gooddog-webfont.svg#gooddogregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
 body {
-  font-family: "Open-Sans";
+  font-family: "Open Sans";
   font-weight: "light"; }
 
 .entry-content .bold-text {
@@ -744,6 +776,16 @@ body {
 .entry-content p {
   font-size: 22px; }
 
+h2.entry-title {
+  font-size: 45px; }
+  h2.entry-title a {
+    text-decoration: none;
+    color: black; }
+    h2.entry-title a:active,
+    h2.entry-title a:hover,
+    h2.entry-title a:active {
+      color: black; }
+
 .main-navigation {
   font-family: "GoodDog"; }
 
@@ -751,7 +793,7 @@ body {
   font-family: "GoodDog"; }
 
 div.about p {
-  font-family: "Open-Sans";
+  font-family: "Open Sans";
   font-size: 22px; }
 
 div.about h2 {
@@ -764,27 +806,219 @@ div.about h2 {
   color: white;
   font-size: 95px; }
 
+.banner-text {
+  font-size: 70px;
+  color: white;
+  font-family: "GoodDog"; }
+
+.excerpt {
+  font-size: 22px; }
+
+.post {
+  font-size: 13px; }
+  .post .post-title {
+    font-size: 45px;
+    font-family: "GoodDog"; }
+  .post .post-link {
+    text-align: left; }
+    .post .post-link a {
+      text-decoration: none;
+      font-size: 22px;
+      font-family: "Open Sans";
+      color: #966C6C !important; }
+      .post .post-link a:active,
+      .post .post-link a:hover,
+      .post .post-link a:focus {
+        color: #966C6C; }
+  .post blockquote {
+    font-weight: light;
+    font-style: italic; }
+
+.entry-header h1 {
+  font-family: "GoodDog";
+  font-size: 70px;
+  color: white;
+  text-align: center; }
+
+.menu-footer-links-container ul li {
+  list-style: none; }
+  .menu-footer-links-container ul li a {
+    color: white;
+    text-decoration: none; }
+    .menu-footer-links-container ul li a:active,
+    .menu-footer-links-container ul li a:focus,
+    .menu-footer-links-container ul li a:hover {
+      color: white; }
+
+.email {
+  font-size: 16px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #979797;
+  padding: 10px; }
+  .email p {
+    margin: 0;
+    padding-bottom: 10px; }
+  .email a {
+    color: #966C6C;
+    text-decoration: none;
+    font-size: 16px; }
+
+.view-books a {
+  color: #966C6C;
+  font-size: 19px;
+  text-decoration: none; }
+
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
-.center-align {
-  text-align: center;
-  margin: 0 auto; }
-
 .entry-content {
   max-width: 760px;
   margin: 0 auto; }
 
 .about {
-  width: 760px;
+  min-width: 100%;
   margin: 0 auto;
-  text-align: center; }
+  background-color: white;
+  text-align: center;
+  padding-top: 64px; }
+  .about h2 {
+    margin-top: 0; }
+  .about p {
+    width: 760px;
+    margin: 0 auto;
+    margin-bottom: 65px; }
 
 .home {
   min-width: 100%;
-  height: 882px;
+  height: calc(80vh - 88px);
   text-align: center;
-  margin: 0; }
+  margin: 0;
+  position: relative; }
   .home .learning-omnivores {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 0;
+    right: 0; }
+
+.home-banner {
+  min-width: 100%;
+  height: 249px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  margin-bottom: 64px; }
+
+.post {
+  margin-bottom: 62px;
+  min-width: 100%;
+  position: relative;
+  text-align: center; }
+  .post .post-info {
+    text-align: center;
+    margin: 0 auto; }
+  .post .post-author, .post .post-date {
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #9B9B9B;
+    padding: 8px 15px;
+    margin-left: 22px;
+    margin-right: 22px;
+    background-color: white;
+    text-align: center; }
+  .post .post-link {
+    width: 760px;
+    margin: 0 auto; }
+  .post .post-title {
+    text-align: center; }
+  .post .post-content {
+    width: 950px;
+    margin: 0 auto;
+    font-size: 22px; }
+
+.books {
+  display: inline-block;
+  max-width: 80%;
+  margin: 0 auto; }
+  .books .book {
+    display: inline-block;
+    padding: 78px 41px; }
+    .books .book img {
+      max-width: 222px;
+      max-height: 339px; }
+
+.reading-book {
+  margin: 0 auto;
+  text-align: center; }
+
+.line {
+  border: solid;
+  border-width: thin;
+  border-color: #9B9B9B;
+  position: absolute;
+  min-width: 100%;
+  z-index: -999;
+  top: 2%; }
+
+.single-line {
+  top: 48%; }
+
+.single-post {
+  text-align: left; }
+
+.excerpt p {
+  width: 760px;
+  margin: 0 auto;
+  text-align: left;
+  margin-bottom: 46px; }
+
+.menu-footer-links-container {
+  background-color: #4B617A;
+  margin-bottom: 0;
+  padding-bottom: 15px; }
+  .menu-footer-links-container #menu-footer-links {
+    margin-left: 0;
+    padding-left: 0; }
+  .menu-footer-links-container ul li {
+    display: inline-block; }
+
+.top-margin {
+  margin-top: 100px; }
+
+.contact {
+  min-width: 100%; }
+
+.gform_wrapper {
+  margin: 0;
+  float: left;
+  padding: 0;
+  max-width: 500px; }
+
+.email {
+  margin: 0;
+  float: right;
+  max-width: 260px;
+  padding: 0; }
+
+.view-books {
+  border-radius: 25px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #966C6C;
+  paddding: 10px;
+  max-width: 150px;
+  margin: 0 auto 100px auto; }

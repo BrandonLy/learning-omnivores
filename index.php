@@ -16,11 +16,11 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<div class="home">
+		<header class="home">
 			
 			<h1 class="learning-omnivores">Learning Omnivores</h1>
 
-		</div>
+		</header>
 
 		<div class="about">
 
@@ -29,6 +29,8 @@ get_header(); ?>
 			<p>Learning Omnivores is dedicated to giving teachers the tools and knowledge they need to better handle a classroom. Learning Omnivores provides New Rules that any teacher can follow as well as blog posts to inspire you.</p>		
 
 		</div>     
+		
+		<div class="fire home-banner"><p class="banner-text">Thoughts on Fire</p></div>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -41,15 +43,21 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
+				<div class="post">
 
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content', get_post_format() );
-				?>
+					<div class="line"></div>
+
+					<span class="post-author">By <?php echo get_the_author(); ?></span>
+
+					<span class="post-date"><?php echo get_the_date(); ?></span>
+
+					<h2 class="post-title"><?php echo get_the_title(); ?></h2>
+
+					<span class="excerpt"><?php the_excerpt(); ?></span>
+
+					<div class="post-link"><a href="<?php echo get_permalink(); ?>"> Continue Reading ></a></div>
+
+				</div>
 
 			<?php endwhile; ?>
 
@@ -61,8 +69,45 @@ get_header(); ?>
 
 		<?php endif; ?>
 
+		<div class="rules home-banner"><p class="banner-text">New Rules</div>
+
+		<?php $loop = new WP_Query( array( 'post_type' => 'rules', 'posts_per_page' => 4 ) ); ?>
+			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				<div class="post">
+
+						<div class="line"></div>
+
+						<span class="post-author">By <?php echo get_the_author(); ?></span>
+
+						<span class="post-date"><?php echo get_the_date(); ?></span>
+
+						<h2 class="post-title"><?php echo get_the_title(); ?></h2>
+
+						<span class="excerpt"><?php the_excerpt(); ?></span>
+
+						<div class="post-link"><a href="<?php echo get_permalink(); ?>"> Continue Reading ></a></div>
+
+					</div>
+		<?php endwhile; wp_reset_query(); ?>
+
+		<div class="reading home-banner"><p class="banner-text">What We're Reading</div>
+
+		<div class="books">
+
+		<?php $loop = new WP_Query( array( 'post_type' => 'what-were-reading', 'posts_per_page' => 4 ) ); ?>
+			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				<div class="book">
+
+					<div class="post-link"><a href="<?php echo get_permalink(); ?>"><img src="<?php echo wp_get_attachment_url( get_post_meta(get_the_ID(), 'book_cover', TRUE) );?>"/></a></div>
+
+				</div>
+		<?php endwhile; wp_reset_query(); ?>
+
+		</div>
+
+		<p class="view-books"><a href="<?php get_site_url(); ?>/what-were-reading-2/">View All Books</a></p>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
