@@ -105,7 +105,7 @@ get_header(); ?>
 
 		</div>
 
-		<p class="view-books"><a href="<?php get_site_url(); ?>/what-were-reading-2/">View All Books</a></p>
+		<p class="view-books"><a href="<?php echo get_site_url(); ?>/what-were-reading-2/">View All Books</a></p>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

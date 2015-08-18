@@ -79,3 +79,33 @@
 		}
 	}
 } )();
+
+var mobileToggle = document.getElementsByClassName('mobile-toggle')[0];
+var mobileNav = document.getElementsByClassName('mobile-menu')[0];
+
+mobileToggle.onclick = function() {
+	if (mobileNav.classList.contains('show')) {
+		mobileNav.classList.remove('show');
+		mobileNav.classList.add('hide');
+	} else {
+		mobileNav.classList.remove('hide');
+		mobileNav.classList.add('show');
+	}
+}
+
+mobileNav.onclick = function() {
+	if (mobileNav.classList.contains('show')) {
+		mobileNav.classList.remove('show');
+		mobileNav.classList.add('hide');
+	} else {
+		mobileNav.classList.remove('hide');
+		mobileNav.classList.add('show');
+	}
+}
+
+function hideNav() {
+	if (mobileNav.classList.contains('show')) {
+		mobileNav.classList.remove('show');
+		mobileNav.classList.add('hide');
+	}
+}

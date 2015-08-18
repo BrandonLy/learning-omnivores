@@ -4,7 +4,7 @@ Theme URI: https://cherrypopdesigns.com
 Author: Cherry Pop Designs
 Author URI: https://cherrypopdesigns.com
 Description: A custom theme for Learning Omnivores
-Version: 1.0.0
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: learning-omnivores
@@ -42,6 +42,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 	## Captions
 	## Galleries
+#Fonts
+#Layout
+#Mobile Styles
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
@@ -114,4 +117,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
-@import "layout/layout"
+@import "layout/layout";
+
+/*--------------------------------------------------------------
+# Mobile Queries
+--------------------------------------------------------------*/
+@import "mobile";

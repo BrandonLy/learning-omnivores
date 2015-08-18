@@ -43,7 +43,8 @@ function learning_omnivores_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'learning-omnivores' ),
-		'footer-menu' => __( ' Footer Menu ' )
+		'footer-menu' => __( ' Footer Menu ' ),
+		'mobile-menu' => __( 'Mobile Menu' )
 	) );
 
 	/*
@@ -117,9 +118,9 @@ function learning_omnivores_scripts() {
 
 	wp_enqueue_style( 'Open Sans', "//fonts.googleapis.com/css?family=Open+Sans:300,300italic" );
 
-	// wp_enqueue_style( 'GoodDog', get_template_uri() . 'fonts/GoodDog.otf' );
-
 	wp_enqueue_script( 'learning-omnivores-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+
+	wp_enqueue_script( 'jquery' );
 
 	wp_enqueue_script( 'learning-omnivores-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 

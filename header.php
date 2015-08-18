@@ -25,7 +25,9 @@
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'learning-omnivores' ); ?></button>
 			<a href="<?php echo home_url(); ?>"><li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-7"></li></a>
+			<div class="mobile-toggle"></div>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			<div class="mobile-menu hide"><?php wp_nav_menu( array( 'theme_location' => 'mobile-menu', 'menu_class' => 'nav-menu-mobile' ) ); ?></div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

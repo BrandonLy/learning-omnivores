@@ -1,5 +1,17 @@
-//Variables
+/* Variables */
 $nav-height: 88px;
+
+.nav-menu-mobile {
+	display: none;
+}
+
+.mobile-toggle {
+	display: none;
+}
+
+.menu-toggle {
+	display: none;
+}
 
 .main-navigation {
 	text-align: center;
@@ -44,7 +56,8 @@ $nav-height: 88px;
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+
+@media screen and (min-width: 300px) {
 	.menu-toggle {
 		display: none;
 	}
@@ -52,6 +65,7 @@ $nav-height: 88px;
 		display: block;
 	}
 }
+
 
 .comment-navigation,
 .posts-navigation,
@@ -71,5 +85,45 @@ $nav-height: 88px;
 		float: right;
 		text-align: right;
 		width: 50%;
+	}
+}
+
+/* Mobile Menu */
+
+@media screen and (max-width: 1110px) {
+	#primary-menu {
+		display: none;
+	}
+	.mobile-toggle {
+		display: block;
+		background-image: url('image/menu.png');
+		width: 70px;
+		height: 70px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		float: right;
+		margin-right: 20px;
+		color: white;
+		z-index: 999;
+	}
+
+	.nav-menu-mobile {
+		list-style: none;
+		position: absolute;
+		left: 0;
+		right: 0;
+		z-index: 998;
+		background-color: rgba(60,60,60, .6);
+		min-width: 100%;
+		margin: 0;
+		padding: 0;
+		li {
+			padding: 20px;
+			font-size: 30px;
+		}
+		a {
+			color: white;
+			text-decoration: none;
+		}
 	}
 }

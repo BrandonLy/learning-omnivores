@@ -4,7 +4,7 @@ Theme URI: https://cherrypopdesigns.com
 Author: Cherry Pop Designs
 Author URI: https://cherrypopdesigns.com
 Description: A custom theme for Learning Omnivores
-Version: 1.0.0
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: learning-omnivores
@@ -41,6 +41,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 	## Captions
 	## Galleries
+#Fonts
+#Layout
+#Mobile Styles
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -449,6 +452,16 @@ textarea {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+/* Variables */
+.nav-menu-mobile {
+  display: none; }
+
+.mobile-toggle {
+  display: none; }
+
+.menu-toggle {
+  display: none; }
+
 .main-navigation {
   text-align: center;
   margin: 0px;
@@ -484,7 +497,7 @@ textarea {
 .main-navigation.toggled ul {
   display: block; }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 300px) {
   .menu-toggle {
     display: none; }
   .main-navigation ul {
@@ -508,6 +521,38 @@ textarea {
   float: right;
   text-align: right;
   width: 50%; }
+
+/* Mobile Menu */
+@media screen and (max-width: 1110px) {
+  #primary-menu {
+    display: none; }
+  .mobile-toggle {
+    display: block;
+    background-image: url("image/menu.png");
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: right;
+    margin-right: 20px;
+    color: white;
+    z-index: 999; }
+  .nav-menu-mobile {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    background-color: rgba(60, 60, 60, 0.6);
+    min-width: 100%;
+    margin: 0;
+    padding: 0; }
+    .nav-menu-mobile li {
+      padding: 20px;
+      font-size: 30px; }
+    .nav-menu-mobile a {
+      color: white;
+      text-decoration: none; } }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -1022,3 +1067,80 @@ div.about h2 {
   paddding: 10px;
   max-width: 150px;
   margin: 0 auto 100px auto; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
+/*--------------------------------------------------------------
+# Mobile Queries
+--------------------------------------------------------------*/
+@media screen and (max-width: 1000px) {
+  /*
+	html,body {
+	    width: 100%;
+	    height: 100%;
+	    margin: 0px;
+	    padding: 0px;
+	    overflow-x: hidden; 
+	}
+*/
+  html, body {
+    max-width: 100%;
+    max-height: 100%; }
+  .menu-toggle {
+    display: none; }
+  #site-navigation {
+    min-width: 100%; }
+  .mobile-menu {
+    min-width: 100%; }
+    .mobile-menu li {
+      padding: 18px; }
+  #menu-item-7 {
+    margin-left: 0; }
+  header.home {
+    max-width: 100%; }
+    header.home h1 {
+      font-size: 44px; }
+  .about h2 {
+    font-size: 30px; }
+  .about p {
+    max-width: 90%; }
+  .home-banner {
+    max-width: 100%;
+    overflow-x: hidden; }
+    .home-banner p {
+      font-size: 55px; }
+  .post {
+    max-width: 80%; }
+    .post .excerpt p {
+      max-width: 80%; }
+    .post .post-link {
+      max-width: 80%;
+      margin: 0;
+      margin-left: 10%; }
+  .books {
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center; }
+  .entry-header h1 {
+    margin-top: 20%;
+    font-size: 40px;
+    height: 350px; }
+  .post-content {
+    max-width: 80%; }
+  .reading-book img {
+    width: 60%;
+    height: 60%; }
+  .line {
+    top: 1%;
+    min-width: calc(100% - 2px); }
+  .entry-content {
+    max-width: 80%; }
+  .email {
+    display: block;
+    float: none; }
+  #gform_wrapper_1 {
+    float: none; } }
