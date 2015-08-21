@@ -16,6 +16,13 @@ body {
 	font-weight: "light";
 }
 
+.banner-quote {
+	font-size: 33px;
+	text-align: left;
+	color: white;
+	font-family: $heading-font;
+}
+
 .entry-content {
 	.bold-text {
 		font-size: 45px;
@@ -32,7 +39,7 @@ h2.entry-title {
 		color: black;
 		&:active,
 		&:hover,
-		&:active {
+	    &:active{
 			color: black;
 		}
 	}
@@ -46,6 +53,11 @@ h2.entry-title {
 	font-family: $heading-font;
 }
 
+.heading-quote {
+	font-family: $heading-font;
+	color: white;
+}
+
 div.about {
 	p{
 		font-family: $body-font;
@@ -54,7 +66,7 @@ div.about {
 	h2 {
 		font-family: $heading-font;
 		font-size: 50px;
-		color: #966C6C;
+		color: #81DA8A;
 	}
 }
 
@@ -62,6 +74,9 @@ div.about {
 	font-family: $heading-font;
 	color: white;
 	font-size: 95px;
+	.massive-o {
+		font-size: 137px;
+	}
 }
 
 .banner-text {
@@ -79,9 +94,13 @@ div.about {
 	.post-author, .post-date {
 		
 	}
-	.post-title {
-		font-size: 45px;
-		font-family: $heading-font;
+	a {
+		color: black;
+		text-decoration: none;
+		.post-title {
+			font-size: 45px;
+			font-family: $heading-font;
+		}
 	}
 	.post-link {
 		text-align: left;
@@ -101,6 +120,36 @@ div.about {
 		font-weight: light;
 		font-style: italic;
 	}
+}
+
+.fire-posts {
+	.post-title {
+		color: #DE8D69;
+		font-size: 45px;
+		font-family: $heading-font;
+	}
+}
+
+.rules-posts {
+	.post-title {
+		color: #A45111;
+		font-size: 45px;
+		font-family: $heading-font;
+	}
+}
+
+.rules-page {
+	.post-title {
+		color: #659698;
+		font-size: 45px;
+		font-family: $heading-font;
+	}
+}
+
+.bookshelf {
+	color: #819A4D;
+	font-family: $heading-font;
+	font-size: 70px;
 }
 
 .entry-header {

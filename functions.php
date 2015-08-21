@@ -118,6 +118,8 @@ function learning_omnivores_scripts() {
 
 	wp_enqueue_style( 'Open Sans', "//fonts.googleapis.com/css?family=Open+Sans:300,300italic" );
 
+	wp_enqueue_style( 'Source Sans  Pro', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300' ); 
+
 	wp_enqueue_script( 'learning-omnivores-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'jquery' );

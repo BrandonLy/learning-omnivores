@@ -13,14 +13,22 @@ $nav-height: 88px;
 	display: none;
 }
 
+#site-navigation {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
 .main-navigation {
-	text-align: center;
+	text-align: right;
 	margin: 0px;
 	padding: 0px;
 	height: $nav-height;
 	background-color: rgba(60,60,60, .4);
 	position: relative;
 	.nav-menu {
+		margin-right: 127px;
 		li {
 			list-style: none;
 			display: inline-block;
@@ -31,6 +39,10 @@ $nav-height: 88px;
 				color: white;
 				text-decoration: none;
 				font-size: 28px;
+				&:hover,
+				&:focus {
+					color: black;
+				}
 			}
 		}
 	}
@@ -96,7 +108,7 @@ $nav-height: 88px;
 	}
 	.mobile-toggle {
 		display: block;
-		background-image: url('image/menu.png');
+		/*background-image: url('image/menu.png');*/
 		width: 70px;
 		height: 70px;
 		background-size: cover;
@@ -113,6 +125,7 @@ $nav-height: 88px;
 		left: 0;
 		right: 0;
 		z-index: 998;
+		text-align: center;
 		background-color: rgba(60,60,60, .6);
 		min-width: 100%;
 		margin: 0;

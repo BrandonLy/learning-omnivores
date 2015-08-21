@@ -11,6 +11,7 @@
  * @package Learning Omnivores
  */
 
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">
@@ -18,7 +19,7 @@ get_header(); ?>
 
 		<header class="home">
 			
-			<h1 class="learning-omnivores">Learning Omnivores</h1>
+			<h1 class="learning-omnivores">Learning <span class="massive-o">O</span>mnivores</h1>
 
 		</header>
 
@@ -30,7 +31,13 @@ get_header(); ?>
 
 		</div>     
 		
-		<div class="fire home-banner"><p class="banner-text">Thoughts on Fire</p></div>
+		<div class="fire home-banner">
+			<p class="banner-text">Igniting Learning</p>
+				<p class="banner-quote">"Educating is not the filling of a pail, but the lighting of the fire."</p>
+				<p class="banner-quote">-William Butler Yeats</p>
+		</div>
+
+		<div class="fire-posts">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -51,7 +58,7 @@ get_header(); ?>
 
 					<span class="post-date"><?php echo get_the_date(); ?></span>
 
-					<h2 class="post-title"><?php echo get_the_title(); ?></h2>
+					<a href="<?php echo get_permalink(); ?>"><h2 class="post-title"><?php echo get_the_title(); ?></h2></a>
 
 					<span class="excerpt"><?php the_excerpt(); ?></span>
 
@@ -69,6 +76,10 @@ get_header(); ?>
 
 		<?php endif; ?>
 
+		</div>
+
+		<div class="rules-posts">
+
 		<div class="rules home-banner"><p class="banner-text">New Rules</div>
 
 		<?php $loop = new WP_Query( array( 'post_type' => 'rules', 'posts_per_page' => 4 ) ); ?>
@@ -81,7 +92,7 @@ get_header(); ?>
 
 						<span class="post-date"><?php echo get_the_date(); ?></span>
 
-						<h2 class="post-title"><?php echo get_the_title(); ?></h2>
+						<a href="<?php echo get_permalink(); ?>"><h2 class="post-title"><?php echo get_the_title(); ?></h2></a>
 
 						<span class="excerpt"><?php the_excerpt(); ?></span>
 
@@ -89,6 +100,8 @@ get_header(); ?>
 
 					</div>
 		<?php endwhile; wp_reset_query(); ?>
+
+		</div>
 
 		<div class="reading home-banner"><p class="banner-text">What We're Reading</div>
 
@@ -106,6 +119,21 @@ get_header(); ?>
 		</div>
 
 		<p class="view-books"><a href="<?php echo get_site_url(); ?>/what-were-reading-2/">View All Books</a></p>
+
+		<h2 class="post-title bookshelf">What's Next on the Bookshelf?</h2>
+
+		<div class="books">
+
+		<?php $loop = new WP_Query( array( 'post_type' => 'what-were-reading', 'posts_per_page' => 4 ) ); ?>
+			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				<div class="book">
+
+					<div class="post-link"><a href="<?php echo get_permalink(); ?>"><img src="<?php echo wp_get_attachment_url( get_post_meta(get_the_ID(), 'book_cover', TRUE) );?>"/></a></div>
+
+				</div>
+		<?php endwhile; wp_reset_query(); ?>
+
+		</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

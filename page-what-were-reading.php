@@ -12,12 +12,10 @@
 <?php if (has_post_thumbnail( $post->ID ) ): ?>
   			<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
   			<div id="custom-bg" style="background-image: url('<?php echo $image[0]; ?>')">
-
+				<header class="entry-header custom-header"><h1 class="entry-title">What We're Reading</h1></header>
   			</div>
   			
 		<?php endif; ?>
-
-		<header class="entry-header"><h1 class="entry-title">What We're Reading</h1></header>
 
 		<div class="books">
 
