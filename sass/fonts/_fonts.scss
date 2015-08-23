@@ -109,10 +109,10 @@ div.about {
 			font-size: 22px;
 			font-family: $body-font;
 			color: #966C6C !important; 
-				&:active, 
 				&:hover,
 				&:focus {
-				color: #966C6C;
+				color: #543D3D;
+				@include transition(500ms);
 				}
 		}
 	}

@@ -488,7 +488,12 @@ textarea {
         font-size: 28px; }
         .main-navigation .nav-menu li a:hover,
         .main-navigation .nav-menu li a:focus {
-          color: black; }
+          color: #404040;
+          transition: 500ms;
+          -webkit-transition: 500ms;
+          -moz-transition: transitionTime;
+          -o-transition: transitionTime;
+          font-size: 32px; }
 
 #menu-item-7 {
   background-image: url("image/Logo.png");
@@ -893,10 +898,13 @@ div.about h2 {
       font-size: 22px;
       font-family: "Open Sans";
       color: #966C6C !important; }
-      .post .post-link a:active,
       .post .post-link a:hover,
       .post .post-link a:focus {
-        color: #966C6C; }
+        color: #543D3D;
+        transition: 500ms;
+        -webkit-transition: 500ms;
+        -moz-transition: transitionTime;
+        -o-transition: transitionTime; }
   .post blockquote {
     font-weight: light;
     font-style: italic; }
@@ -1018,7 +1026,8 @@ div.about h2 {
   margin: 0 auto;
   background-color: white;
   text-align: center;
-  padding-top: 64px; }
+  padding-top: 64px;
+  padding-bottom: 40px; }
   .about h2 {
     margin-top: 0; }
   .about p {
@@ -1264,6 +1273,8 @@ div.about h2 {
     overflow-x: hidden; }
     .home-banner p {
       font-size: 55px; }
+  .banner-quote {
+    font-size: 25px !important; }
   .post {
     max-width: 80%; }
     .post .excerpt p {
@@ -1296,4 +1307,8 @@ div.about h2 {
   .massive-o {
     font-size: 64px !important; }
   .entry-header {
-    height: 350px; } }
+    height: 350px; }
+  .heading-quote {
+    font-size: 20px; }
+  .rules-card p {
+    font-size: 20px; } }

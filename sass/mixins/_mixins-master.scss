@@ -36,3 +36,10 @@
     left: 0;
     right: 0;
 }
+
+@mixin transition($transitionTime) {
+	transition: $transitionTime;
+	-webkit-transition: $transitionTime;
+	-moz-transition: transitionTime;
+	-o-transition: transitionTime;
+}

@@ -41,7 +41,9 @@ $nav-height: 88px;
 				font-size: 28px;
 				&:hover,
 				&:focus {
-					color: black;
+					color: #404040;
+					@include transition(500ms);
+					font-size: 32px;
 				}
 			}
 		}

@@ -57,6 +57,10 @@
 		}
 	}
 
+	.banner-quote {
+		font-size: 25px !important;
+	}
+
 	.post {
 		max-width: 80%;
 		.excerpt {
@@ -119,4 +123,15 @@
 	.entry-header {
 		height: 350px;
 	} 
+
+	.heading-quote {
+		font-size: 20px;
+	}
+
+	.rules-card {
+		p {
+			font-size: 20px;
+		}
+	}
+
 }
