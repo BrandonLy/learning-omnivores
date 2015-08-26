@@ -20,7 +20,7 @@
   			
 		<?php endif; ?>
 
-		<div class="rules-card teal">
+		<!-- <div class="rules-card teal">
 			<p>“We are currently preparing students for jobs that don’t exist yet...using technologies that haven’t been invented...
 in order to solve problems that we don’t even know are problems yet…”</p>
 			<p>-Richard Riley, former U.S. Education Secretary.</p>
@@ -35,6 +35,11 @@ in order to solve problems that we don’t even know are problems yet…”</p>
 			<p>“It is not necessary to change. Survival is not mandatory.”</p>
 			<p>W. Edwards Deming, noted engineer, statistician, professor, author, lecturer, and management consultant.</p>
 		</div>
+
+		<div class="rules-page"> -->
+
+		<?php echo do_shortcode("[show-testimonials orderby='menu_order' order='ASC' layout='slider' options='transition:fade,adaptive:false,controls:pager,pause:3500,auto:on,columns:1,theme:none,info-position:info-below,text-alignment:center,quote-content:short,charlimitextra: (...),image-size:ttshowcase_small,image-shape:circle,image-effect:none,image-link:on']"); ?>
+
 
 		<div class="rules-page">
 

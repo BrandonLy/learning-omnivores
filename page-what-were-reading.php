@@ -21,11 +21,14 @@
 
 		<?php $loop = new WP_Query( array( 'post_type' => 'what-were-reading', 'posts_per_page' => 4 ) ); ?>
 			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+				<?php if ( !get_field( "on_the_bookshelf" ) ) { ?>
 				<div class="book">
 
 					<div class="post-link"><a href="<?php echo get_permalink(); ?>"><img src="<?php echo wp_get_attachment_url( get_post_meta(get_the_ID(), 'book_cover', TRUE) );?>"/></a></div>
 
 				</div>
+				<?php } ?>
 		<?php endwhile; wp_reset_query(); ?>
 
 		</div>

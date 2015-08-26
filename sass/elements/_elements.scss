@@ -46,6 +46,11 @@ img {
 			color: white;
 			a {
 				color: #FD7888;
+				&:hover,
+				&:focus {
+					color: #506782 !important;
+					@include transition(500ms); 
+				}
 			}
 		}
 	}

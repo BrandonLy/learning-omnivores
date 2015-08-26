@@ -118,36 +118,28 @@
 	}
 }
 
-.rules-card {
-	min-width: 100%;
-	text-align: center;
-	font-family: $heading-font;
-	font-size: 30px;
+.ttshowcase_wrap {
 	color: white;
-	height: 240px;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	p {
-		margin: 0;
-		padding-bottom: 24px;
-		max-width: 80%;
+	.ttshowcase_rl_box:nth-of-type(2) {
+		background-color: #555871;
+		p,div {
+			background-color: #555871;
+		}
+	}
+	.ttshowcase_rl_box:first-child {
+		background-color: #556B71;
+	}
+	.ttshowcase_rl_box:nth-of-type(3) {
+		background-color: #A9A49E;
+		p,div {
+			background-color: #A9A49E;
+		}
 	}
 }
 
-.teal {
-	background-color: #556B71;
-}
-
-.blue {
-	background-color: #555871;
-}
-
-.gray {
-	background-color: #A9A49E;
+.ttshowcase_slider .bx-wrapper .bx-viewport {
+	left: 0 !important;
+	height: 240px !important;
 }
 
 .books {

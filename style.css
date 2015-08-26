@@ -4,7 +4,7 @@ Theme URI: https://cherrypopdesigns.com
 Author: Cherry Pop Designs
 Author URI: https://cherrypopdesigns.com
 Description: A custom theme for Learning Omnivores
-Version: 1.0.3
+Version: 1.0.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: learning-omnivores
@@ -354,6 +354,13 @@ img {
       color: white; }
       .site-footer .site-info p a {
         color: #FD7888; }
+        .site-footer .site-info p a:hover,
+        .site-footer .site-info p a:focus {
+          color: #506782 !important;
+          transition: 500ms;
+          -webkit-transition: 500ms;
+          -moz-transition: transitionTime;
+          -o-transition: transitionTime; }
 
 table {
   margin: 0 0 1.5em;
@@ -492,8 +499,7 @@ textarea {
           transition: 500ms;
           -webkit-transition: 500ms;
           -moz-transition: transitionTime;
-          -o-transition: transitionTime;
-          font-size: 32px; }
+          -o-transition: transitionTime; }
 
 #menu-item-7 {
   background-image: url("image/Logo.png");
@@ -765,6 +771,13 @@ object {
   background-size: cover;
   background-position: center; }
 
+.book:hover, .book:focus {
+  opacity: 0.5;
+  transition: 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: transitionTime;
+  -o-transition: transitionTime; }
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
@@ -883,6 +896,10 @@ div.about h2 {
 .excerpt {
   font-size: 22px; }
 
+h1.post-title {
+  font-family: "GoodDog";
+  font-size: 45px; }
+
 .post {
   font-size: 13px; }
   .post a {
@@ -900,7 +917,7 @@ div.about h2 {
       color: #966C6C !important; }
       .post .post-link a:hover,
       .post .post-link a:focus {
-        color: #543D3D;
+        color: #E0DADA !important;
         transition: 500ms;
         -webkit-transition: 500ms;
         -moz-transition: transitionTime;
@@ -913,11 +930,25 @@ div.about h2 {
   color: #DE8D69;
   font-size: 45px;
   font-family: "GoodDog"; }
+  .fire-posts .post-title:hover,
+  .fire-posts .post-title:focus {
+    color: #FFE4DC;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: transitionTime;
+    -o-transition: transitionTime; }
 
 .rules-posts .post-title {
   color: #A45111;
   font-size: 45px;
   font-family: "GoodDog"; }
+  .rules-posts .post-title:hover,
+  .rules-posts .post-title:focus {
+    color: #F5DED3;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: transitionTime;
+    -o-transition: transitionTime; }
 
 .rules-page .post-title {
   color: #659698;
@@ -943,7 +974,11 @@ div.about h2 {
     .menu-footer-links-container ul li a:active,
     .menu-footer-links-container ul li a:focus,
     .menu-footer-links-container ul li a:hover {
-      color: white; }
+      color: #506782;
+      transition: 500ms;
+      -webkit-transition: 500ms;
+      -moz-transition: transitionTime;
+      -o-transition: transitionTime; }
 
 .email {
   font-size: 16px;
@@ -959,10 +994,29 @@ div.about h2 {
     text-decoration: none;
     font-size: 16px; }
 
+.view-books:hover,
+.view-books:focus {
+  border-color: #E0DADA !important;
+  transition: 500ms;
+  -webkit-transition: 500ms;
+  -moz-transition: transitionTime;
+  -o-transition: transitionTime; }
+
 .view-books a {
   color: #966C6C;
   font-size: 19px;
   text-decoration: none; }
+  .view-books a:hover,
+  .view-books a:focus {
+    color: #E0DADA !important;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: transitionTime;
+    -o-transition: transitionTime; }
+
+.ttshowcase_wrap {
+  font-family: "GoodDog";
+  font-size: 30px; }
 
 /*--------------------------------------------------------------
 # Layout
@@ -1115,45 +1169,22 @@ div.about h2 {
     margin: 0 auto;
     font-size: 22px; }
 
-.rules-card {
-  min-width: 100%;
-  text-align: center;
-  font-family: "GoodDog";
-  font-size: 30px;
-  color: white;
-  height: 240px;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-  .rules-card p {
-    margin: 0;
-    padding-bottom: 24px;
-    max-width: 80%; }
+.ttshowcase_wrap {
+  color: white; }
+  .ttshowcase_wrap .ttshowcase_rl_box:nth-of-type(2) {
+    background-color: #555871; }
+    .ttshowcase_wrap .ttshowcase_rl_box:nth-of-type(2) p, .ttshowcase_wrap .ttshowcase_rl_box:nth-of-type(2) div {
+      background-color: #555871; }
+  .ttshowcase_wrap .ttshowcase_rl_box:first-child {
+    background-color: #556B71; }
+  .ttshowcase_wrap .ttshowcase_rl_box:nth-of-type(3) {
+    background-color: #A9A49E; }
+    .ttshowcase_wrap .ttshowcase_rl_box:nth-of-type(3) p, .ttshowcase_wrap .ttshowcase_rl_box:nth-of-type(3) div {
+      background-color: #A9A49E; }
 
-.teal {
-  background-color: #556B71; }
-
-.blue {
-  background-color: #555871; }
-
-.gray {
-  background-color: #A9A49E; }
+.ttshowcase_slider .bx-wrapper .bx-viewport {
+  left: 0 !important;
+  height: 240px !important; }
 
 .books {
   display: inline-block;
@@ -1309,6 +1340,4 @@ div.about h2 {
   .entry-header {
     height: 350px; }
   .heading-quote {
-    font-size: 20px; }
-  .rules-card p {
     font-size: 20px; } }

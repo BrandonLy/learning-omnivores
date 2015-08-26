@@ -108,17 +108,25 @@ get_header(); ?>
 		<div class="books">
 
 		<?php $loop = new WP_Query( array( 'post_type' => 'what-were-reading', 'posts_per_page' => 4 ) ); ?>
-			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>		
+
+			<?php if ( !get_field( "on_the_bookshelf" ) ) { ?>
+
+			<?php //$fields = get_fields(); ?>
+			<?php //var_dump( $fields ); ?>
+
 				<div class="book">
-
-					<div class="post-link"><a href="<?php echo get_permalink(); ?>"><img src="<?php echo wp_get_attachment_url( get_post_meta(get_the_ID(), 'book_cover', TRUE) );?>"/></a></div>
-
+				
+					<div class="post-link image"><a href="<?php echo get_permalink(); ?>"><img src="<?php echo wp_get_attachment_url( get_post_meta(get_the_ID(), 'book_cover', TRUE) );?>"/></a></div>		
+					
 				</div>
+
+			<?php } ?>
 		<?php endwhile; wp_reset_query(); ?>
 
 		</div>
 
-		<p class="view-books"><a href="<?php echo get_site_url(); ?>/what-were-reading-2/">View All Books</a></p>
+		<p class="view-books"><a href="<?php echo get_site_url(); ?>/what-were-reading/">View All Books</a></p>
 
 		<h2 class="post-title bookshelf">What's Next on the Bookshelf?</h2>
 
@@ -126,11 +134,15 @@ get_header(); ?>
 
 		<?php $loop = new WP_Query( array( 'post_type' => 'what-were-reading', 'posts_per_page' => 4 ) ); ?>
 			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+			<?php if ( get_field( "on_the_bookshelf" ) ) { ?>
 				<div class="book">
 
-					<div class="post-link"><a href="<?php echo get_permalink(); ?>"><img src="<?php echo wp_get_attachment_url( get_post_meta(get_the_ID(), 'book_cover', TRUE) );?>"/></a></div>
+					<div class="post-link"><img src="<?php echo wp_get_attachment_url( get_post_meta(get_the_ID(), 'book_cover', TRUE) );?>"/></div>
 
 				</div>
+
+			<?php } ?>
 		<?php endwhile; wp_reset_query(); ?>
 
 		</div>
